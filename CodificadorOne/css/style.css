@@ -32,17 +32,21 @@ section {
 .footer  {
     position: absolute;
     color: #0A3871;
-    padding-top: 30px;
     bottom: 0;
-    align-items: center;
+    left: 50%;
     width: 1440px;
 }
-/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
-@media (max-width: 600px) {
-    section {
-      -webkit-flex-direction: column;
-      flex-direction: column;
-    }
+
+.n-encontradas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    position: absolute;
+    width: 336px;
+    height: 122px;
+    left: 1032px;
+    top: 619px;
 }
 
 .texto-area input{
@@ -129,7 +133,6 @@ section {
     flex-direction: row;
     align-items: center;
     padding: 0px;
-
     position: absolute;
     width: 252px;
     height: 18px;
@@ -143,8 +146,6 @@ a {
     height: 18px;
     left: 24px;
     top: 0px;
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 150%;
@@ -164,25 +165,12 @@ a {
     text-align: center;
 }
 
-.n-encontradas {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    
-    position: absolute;
-    width: 336px;
-    height: 122px;
-    left: 1032px;
-    top: 619px;
-}
 .n-encontradas h3 {
     position: static;
     width: 336px;
     height: 58px;
     left: 0px;
     top: 0px;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 700, bold;
     font-size: 24px;
@@ -203,7 +191,6 @@ a {
     height: 48px;
     left: 0px;
     top: 74px;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -216,3 +203,132 @@ a {
     flex-grow: 0;
     margin: 16px 0px;
 }
+
+@media screen and (max-width: 768px) {
+    body {
+        position: relative;
+        width: 768px;
+        height: 1174px;
+        background: #F3F5FC;
+    }
+    .logo{
+        position: absolute;
+        width: 31.09px;
+        height: 50.58px;
+        left: 40px;
+        top: 73.42px;
+    }
+    .texto-area {
+        position: absolute;
+        width: 688px;
+        height: 48px;
+        left: 40px;
+        top: 240px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 150%;
+        color: #0A3871;
+    }
+    .box-type {
+        display: none;
+    }
+    .n-encontradas{
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 32px;
+
+position: absolute;
+width: 688px;
+height: 133px;
+left: 40px;
+top: 1001px;
+
+/* White */
+
+background: #FFFFFF;
+/* shadow */
+
+box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+border-radius: 32px; 
+    }
+    .n-encontradas h3{
+        position: static;
+        width: 624px;
+        height: 29px;
+        left: 0px;
+        top: 0px;
+        
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 120%;
+        /* identical to box height, or 29px */
+        
+        text-align: center;
+        
+        /* Gray/gray-500 */
+        
+        color: #343A40;
+        
+        
+        /* Inside auto layout */
+        
+        flex: none;
+        order: 0;
+        align-self: stretch;
+        flex-grow: 0;
+        margin: 16px 0px;
+    }
+
+    .n-encontradas p{
+        position: static;
+width: 624px;
+height: 24px;
+left: 0px;
+top: 45px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+
+text-align: center;
+
+/* Gray/gray-400 */
+
+color: #495057;
+    }
+
+    .section-button {
+        /* Auto layout */
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 0px;
+
+        position: absolute;
+        width: 688px;
+        height: 67px;
+        left: 40px;
+        top: 870px;
+    }
+    .alert {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        position: absolute;
+        width: 252px;
+        height: 18px;
+        left: 40px;
+        top: 836px;
+    }
+  }
